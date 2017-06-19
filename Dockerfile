@@ -1,8 +1,7 @@
 FROM openjdk:8u131-jdk-alpine
-
 MAINTAINER JS Minet
 
-ENV	HBASE_VERSION=1.2.6
+ENV HBASE_VERSION=1.2.6
 ENV PATH $PATH:/hbase-${HBASE_VERSION}/bin
 	
 RUN apk add --no-cache wget tar \
