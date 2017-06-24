@@ -18,6 +18,8 @@ RUN apk add --no-cache wget tar bash \
 
 COPY hbase-site.xml /hbase-${HBASE_VERSION}/conf
 
-EXPOSE 2181 8080 8085 9090 9095 16000 16010 16201 16301
+#  2181 - Apache ZooKeeper
+# 16010 - HBase Master Web UI
+EXPOSE 2181 16010
 
 CMD start-hbase.sh && tail -f /dev/null
